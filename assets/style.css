@@ -38,23 +38,28 @@ a {
 
 p {
     font-family: 'NotoSerif', serif;
-    font-weight:200;
-    font-size: 16px;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 32px;
 }
 
 h1 {
     font-family: 'BeVietnamPro', sans-serif;
+    font-size: 36px;
     font-weight: 800;
     color: black;
-    font-size: 36px;
     letter-spacing: 25px;
     text-align: center;
     display: inline;
 }
 
 h2 {
-    margin-bottom: 20px;
+    font-family: 'BeVietnamPro', sans-serif;
     font-size: 36px;
+    font-weight: 800;
+    color: black;
+    text-align: center;
+    display: inline;
 }
 
 h3 {
@@ -83,10 +88,18 @@ footer {
 }
 
 .intro {
-    margin: 0 auto;
-    padding: 100px;
+    padding: 7% 10%;
     height: 300px;
 }
+
+.vertical-line {
+    border-left: 2px solid black;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 318px;
+  }
 
 .hero-container {
     flex: 1 0 0;
@@ -117,32 +130,55 @@ footer {
     width: 50%;
 }
 
+.about-container {
+    padding: 7% 10%;
+    height: 300px;
+}
+
+.about {
+    width: 50%;
+    margin: 0 5%;
+    display: block;
+}
+
 /* Id selectors */
 #subhead {
-    text-align: center;
-    letter-spacing: 10px;
     font-family: 'NotoSerif', serif;
     font-size: 20px;
     font-weight: 500;
+    letter-spacing: 10px;
+    line-height: 35px;
+    text-align: center;
 }
 
 /* Media queries */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
   }
 
-  @media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     
     h1 {
-        font-size: 16px;
+        font-size: 24px;
+        letter-spacing: 15px;
+    }
+
+    .intro {
+        height: 210px;
+    }
+
+    .vertical-line {
+        height: 50px;
+        margin-top: -45px;
     }
 
     .gallery img {
         width: 100%;
     }
 
-    #subhead {
-        font-size: 12px;
+
+    .about {
+        width: 100%;
     }
 
-  }
+}
