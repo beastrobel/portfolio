@@ -3,6 +3,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'BeVietnamPro', sans-serif;
 }
 
 /* Type selectors */
@@ -11,17 +12,15 @@ body {
 }
 
 header {
-    font-family: 'BeVietnamPro', sans-serif;
     padding: 1%;
     border-bottom: 1px solid #d9dcd6;
 }
 
-/* Burger menu: followed WC3Schools tutorial and adapted for desktop */
+/* Burger menu: followed WC3Schools tutorial and adapted it for large screen */
 .topnav {
     overflow: visible;
     background-color: white ;
     position: relative;
-    font-family: 'BeVietnamPro', sans-serif;
 }
       
 .topnav #myLinks {
@@ -29,11 +28,12 @@ header {
 }
       
 .topnav a {
-    color: black;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-weight: 600;
     display: inline;
+    color: black;
 }
       
 .topnav a.icon {
@@ -54,51 +54,10 @@ header {
     color: white;
 }
 
-
-a {
-    color: black;
-    font-family: 'BeVietnamPro', sans-serif;
-    font-weight: 600;
+#hive {
+    color: rgb(255, 217, 0);
 }
-
-p {
-    font-family: 'NotoSerif', serif;
-    font-weight: 200;
-    font-size: 22px;
-    line-height: 32px;
-}
-
-h1 {
-    font-family: 'BeVietnamPro', sans-serif;
-    font-size: 36px;
-    font-weight: 800;
-    color: black;
-    letter-spacing: 25px;
-    text-align: center;
-    display: inline;
-}
-
-h2 {
-    font-family: 'BeVietnamPro', sans-serif;
-    font-size: 36px;
-    font-weight: 800;
-    color: black;
-    text-align: left;
-    display: block;
-}
-
-h3 {
-    font-family: 'BeVietnamPro', sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    color: white;
-    text-align: center;
-    display: inline;
-}
-
-h4 {
-    font-size: 20px;
-}
+/* End of burger menu */
 
 footer {
     background-color: black;
@@ -114,7 +73,6 @@ footer {
 }
 
 footer a{
-    font-family: 'BeVietnamPro', sans-serif;
     font-size: 20px;
     font-weight: 600;
     color: white;
@@ -122,7 +80,51 @@ footer a{
     flex-wrap: wrap;
 }
 
-/* Class selectors */
+/* Text styles */
+p {
+    font-family: 'NotoSerif', serif;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.caption {
+    font-family: 'NotoSerif', serif;
+    font-weight: 200;
+    font-size: 16px;
+    position: relative;
+    font-style: italic;
+    line-height: 32px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 25px;
+    text-align: center;
+    display: inline;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: left;
+    display: block;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    display: inline;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+/* Intro/Hero image section */
 .intro-container {
     width: 100%;
     margin: 0 auto;
@@ -136,16 +138,29 @@ footer a{
     height: 300px;
 }
 
-.vertical-line {
-    border-left: 2px solid black;
-    height: 100px;
-    position: relative;
-    top: 50px;
-    left: 50%;
-    margin-left: -3px;
-  }
+#subhead {
+    font-family: 'NotoSerif', serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 10px;
+    line-height: 35px;
+    text-align: center;
+}
 
+.hero img {
+    width: 100%;
+}
 
+.hero img a: hover{
+    opacity: 50%;
+}  
+
+.hero img a: active{
+    opacity: 50%;
+}
+
+/* Portfolio image gallery */
 .gallery-container {
     flex: 1 0 0;
     margin: 0 2%;
@@ -159,12 +174,12 @@ footer a{
 
 .gallery img {
     width: 50%;
+    padding: 5%;
+    opacity: 80%;
+    justify-content: space-between;
 }
 
-.hero img {
-    width: 100%;
-}
-
+/* About section */
 .about-container {
     padding: 7% 10%;
     margin-bottom: 450px;
@@ -177,36 +192,26 @@ footer a{
     display: block;
 }
 
-
-img.profile-pic {
+.profile-pic {
     border-radius: 50%;
     width: 150px;
 }
 
-/* Id selectors */
-#subhead {
-    font-family: 'NotoSerif', serif;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 10px;
-    line-height: 35px;
-    text-align: center;
-}
-
-#hive {
-    color: rgb(255, 217, 0);
-}
-
-
+/* Decorative design element */
+.vertical-line {
+    border-left: 2px solid black;
+    height: 100px;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    margin-left: -3px;
+  }
 
 /* Media query: tablet */
 @media only screen and (max-width: 768px) {
 /* Burger menu: followed WC3Schools tutorial and restyled it */
   .topnav {
     overflow: hidden;
-    background-color: white ;
-    position: relative;
-    font-family: 'BeVietnamPro', sans-serif;
   }
   
   .topnav #myLinks {
@@ -214,29 +219,11 @@ img.profile-pic {
   }
   
   .topnav a {
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
     display: block;
   }
   
   .topnav a.icon {
-    background: white;
     display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  .topnav a:hover {
-    background-color: #d9dcd6;
-    color: black;
-  }
-  
-  .active {
-    background-color: white;
-    color: white;
   }
 }
 /* End of burger menu */
@@ -246,9 +233,6 @@ img.profile-pic {
 /* Burger menu: followed WC3Schools tutorial and restyled it */
   .topnav {
     overflow: hidden;
-    background-color: white ;
-    position: relative;
-    font-family: 'BeVietnamPro', sans-serif;
   }
   
   .topnav #myLinks {
@@ -256,46 +240,18 @@ img.profile-pic {
   }
   
   .topnav a {
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
     font-size: 12px;
     display: block;
   }
   
   .topnav a.icon {
-    background: white;
     display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  .topnav a:hover {
-    background-color: #d9dcd6;
-    color: black;
-  }
-  
-  .active {
-    background-color: white;
-    color: white;
   }
   /* End of burger menu */
-
-    .hero {
-        background-image: url('../assets/images/WomenOfFaith_sm.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
 
     h1 {
         font-size: 18px;
         letter-spacing: 8px;
-    }
-
-    .intro {
-        padding: 7% 10%;
-        height: 150px;
     }
 
     footer {
@@ -304,8 +260,8 @@ img.profile-pic {
     }
 
     .intro {
-        height: 0px;
         padding: 70px 0px;
+        height: 150px;
     }
 
     #subhead {
@@ -325,7 +281,6 @@ img.profile-pic {
     .gallery img {
         width: 100%;
     }
-
 
     .about {
         width: 100%;
