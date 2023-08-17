@@ -73,33 +73,48 @@ footer {
     text-align: center;
 }
 
-/*
-.hero {
-    height: 800px;
-    width: 100%;
-    margin: 0px 25px 25px 25px;
-    background-image: url('../assets/images/tempHero.jpg');
-    background-size: cover;
-    background-position: center;
-}
-/*
-
 /* Class selectors */
 .container {
     width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .intro {
     margin: 0 auto;
     padding: 100px;
     height: 300px;
-    font-family: 'BeVietnamPro', sans-serif;
-    font-weight: 700;
-    line-height: 36px;
-    justify-content: center;
+}
+
+.hero-container {
+    flex: 1 0 0;
+    margin: 0 2%;
+    padding: 0 8%;
+}
+
+.hero {
+    height: 800px;
+    width: 100%;
+    background-image: url('../assets/images/tempHero.jpg');
+    background-size: cover;
+    display: block;
+}
+
+.gallery-container {
+    flex: 1 0 0;
+    margin: 0 2%;
+    padding: 0 8%;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 50%;
 }
 
 /* Id selectors */
@@ -117,5 +132,17 @@ footer {
   }
 
   @media screen and (max-width: 480px) {
+    
+    h1 {
+        font-size: 16px;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+
+    #subhead {
+        font-size: 12px;
+    }
 
   }
