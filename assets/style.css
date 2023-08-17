@@ -148,17 +148,51 @@ h4 {
     text-align: center;
 }
 
-.hero img {
+.hero-container{
+    position: relative;
     width: 100%;
+    flex: 1 0 0;
+    margin: 0 2%;
+    padding: 0 8%;
 }
 
-.hero img a: hover{
-    opacity: 50%;
-}  
-
-.hero img a: active{
-    opacity: 50%;
+.hero {
+    width: 100%;
+    height: auto;
+    display: block;
 }
+
+/* Overlay: followed WC3Schools tutorial and adapted it */
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;    
+}
+
+.hero-container:hover .overlay {
+    opacity: 70%;
+}
+
+/* This needs debugging */
+.overlay-text {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }	
 
 /* Portfolio image gallery */
 .gallery-container {
