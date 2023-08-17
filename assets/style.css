@@ -11,35 +11,60 @@ body {
 }
 
 header {
-    padding: 20px;
     font-family: 'BeVietnamPro', sans-serif;
+    padding: 1%;
     border-bottom: 1px solid #d9dcd6;
 }
 
-nav {
-    margin-right: 20px;
-    padding-top: 3px;
-    float: right;
+/* Burger menu: followed WC3Schools tutorial and adapted for desktop */
+.topnav {
+    overflow: visible;
+    background-color: white ;
+    position: relative;
     font-family: 'BeVietnamPro', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 1px;
+}
+      
+.topnav #myLinks {
+    display: inline;
+}
+      
+.topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline;
+}
+      
+.topnav a.icon {
+    background: white;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+      
+.topnav a:hover {
+    background-color: #d9dcd6;
+    color: black;
+}
+      
+.active {
+    background-color: white;
+    color: white;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
 
 a {
     color: black;
-    text-decoration: none;
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 600;
 }
 
 p {
     font-family: 'NotoSerif', serif;
     font-weight: 200;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 32px;
 }
 
@@ -98,7 +123,7 @@ footer a{
 }
 
 /* Class selectors */
-.container {
+.intro-container {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -120,19 +145,6 @@ footer a{
     margin-left: -3px;
   }
 
-.hero-container {
-    flex: 1 0 0;
-    margin: 0 2%;
-    padding: 0 8%;
-}
-
-.hero {
-    height: 800px;
-    width: 100%;
-    background-image: url('../assets/images/tempHero.jpg');
-    background-size: cover;
-    display: block;
-}
 
 .gallery-container {
     flex: 1 0 0;
@@ -147,6 +159,10 @@ footer a{
 
 .gallery img {
     width: 50%;
+}
+
+.hero img {
+    width: 100%;
 }
 
 .about-container {
@@ -177,17 +193,109 @@ img.profile-pic {
     text-align: center;
 }
 
+#hive {
+    color: rgb(255, 217, 0);
+}
 
-/* Media queries */
+
+
+/* Media query: tablet */
 @media only screen and (max-width: 768px) {
-
+/* Burger menu: followed WC3Schools tutorial and restyled it */
+  .topnav {
+    overflow: hidden;
+    background-color: white ;
+    position: relative;
+    font-family: 'BeVietnamPro', sans-serif;
   }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: white;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #d9dcd6;
+    color: black;
+  }
+  
+  .active {
+    background-color: white;
+    color: white;
+  }
+}
+/* End of burger menu */
 
+/* Media query: mobile */
 @media only screen and (max-width: 480px) {
-    
+/* Burger menu: followed WC3Schools tutorial and restyled it */
+  .topnav {
+    overflow: hidden;
+    background-color: white ;
+    position: relative;
+    font-family: 'BeVietnamPro', sans-serif;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: white;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #d9dcd6;
+    color: black;
+  }
+  
+  .active {
+    background-color: white;
+    color: white;
+  }
+  /* End of burger menu */
+
+    .hero {
+        background-image: url('../assets/images/WomenOfFaith_sm.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
     h1 {
-        font-size: 24px;
-        letter-spacing: 15px;
+        font-size: 18px;
+        letter-spacing: 8px;
+    }
+
+    .intro {
+        padding: 7% 10%;
+        height: 150px;
     }
 
     footer {
@@ -196,12 +304,22 @@ img.profile-pic {
     }
 
     .intro {
-        height: 210px;
+        height: 0px;
+        padding: 70px 0px;
+    }
+
+    #subhead {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        line-height: 15px;
+        text-align: center;
     }
 
     .vertical-line {
-        height: 50px;
-        top: 25px;
+        height: 30px;
+        top: 15px;
+        border-left: 1px solid black;
     }
 
     .gallery img {
