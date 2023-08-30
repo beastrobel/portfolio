@@ -1,323 +1,43 @@
-/* Universal selector */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Lexend', sans-serif;
-}
-
-/* Type selectors */
-body {
- 
-}
-
-header {
-    padding: 1%;
-    border-bottom: 1px solid #d9dcd6;
-}
-
-/* Burger menu: followed WC3Schools tutorial and adapted it for large screen */
-.topnav {
-    overflow: visible;
-    background-color: white ;
-    position: relative;
-}
-      
-.topnav #myLinks {
-    display: inline;
-}
-      
-.topnav a {
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 600;
-    display: inline;
-    color: black;
-}
-      
-.topnav a.icon {
-    background: white;
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-      
-.topnav a:hover {
-    background-color: #d9dcd6;
-    color: black;
-}
-      
-.active {
-    background-color: white;
-    color: white;
-}
-
-#hive {
-    color: rgb(255, 217, 0);
-}
-/* End of burger menu */
-
-footer {
-    background-color: black;
-    color: white;
-    bottom: 0px;
-    width: 100%;
-    height: 300px;
-    padding: 5% 5% 14% 14%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-
-footer a{
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-}
-
 /* Text styles */
-p {
-    font-family: 'NotoSerif', serif;
-    font-weight: 200;
-    font-size: 22px;
-    line-height: 32px;
-}
 
-.caption {
-    font-family: 'NotoSerif', serif;
-    font-weight: 200;
-    font-size: 16px;
-    position: relative;
-    font-style: italic;
-    line-height: 32px;
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: 800;
-    letter-spacing: 25px;
-    text-align: center;
-    display: inline;
-}
-
-h2 {
-    font-size: 36px;
-    font-weight: 800;
-    text-align: left;
-    display: block;
-}
-
-h3 {
-    font-size: 32px;
-    font-weight: 600;
-    color: white;
-    text-align: center;
-    display: inline;
-}
-
-h4 {
-    font-size: 20px;
-}
-
-/* Intro/Hero image section */
-.intro-container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.intro {
-    padding: 7% 10%;
-    height: 300px;
-}
-
-#subhead {
-    font-family: 'NotoSerif', serif;
-    font-size: 20px;
-    font-weight: 500;
-    font-style: italic;
+.navbar-brand {
+    font-family: 'Lexend', sans-serif;
     letter-spacing: 10px;
-    line-height: 35px;
-    text-align: center;
+    font-weight: 700;
 }
 
-.hero-container{
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/images/HeroImage.jpg");
+  
+    /* Set a specific height */
+    height: 800px;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
-    width: 100%;
-    flex: 1 0 0;
-    margin: 0 2%;
-    padding: 0 8%;
-}
-
-.hero {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Overlay: followed WC3Schools tutorial and adapted it */
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;    
-}
-
-.hero-container:hover .overlay {
-    opacity: 70%;
-}
-
-/* This needs debugging */
-.overlay-text {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
-  }	
-
-/* Portfolio image gallery */
-.gallery-container {
-    flex: 1 0 0;
-    margin: 0 2%;
-    padding: 0 8%;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.gallery img {
-    width: 50%;
-    padding: 5%;
-    opacity: 80%;
-    justify-content: space-between;
-}
-
-/* About section */
-.about-container {
-    padding: 7% 10%;
-    margin-bottom: 450px;
-    height: 300px;
-}
-
-.about {
-    width: 50%;
-    margin: 0 5%;
-    display: block;
-}
-
-.profile-pic {
-    border-radius: 50%;
-    width: 150px;
-}
-
-/* Decorative design element */
-.vertical-line {
-    border-left: 2px solid black;
-    height: 100px;
-    position: relative;
-    top: 50px;
-    left: 50%;
-    margin-left: -3px;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 5px;
   }
 
-/* Media query: tablet */
-@media only screen and (max-width: 768px) {
-/* Burger menu: followed WC3Schools tutorial and restyled it */
-  .topnav {
-    overflow: hidden;
+  #hero-h1{
+    font-size:60px;
+    letter-spacing:25px;
+    font-weight: 600;
   }
   
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  .topnav a {
-    display: block;
-  }
-  
-  .topnav a.icon {
-    display: block;
-  }
-}
-/* End of burger menu */
-
-/* Media query: mobile */
-@media only screen and (max-width: 480px) {
-/* Burger menu: followed WC3Schools tutorial and restyled it */
-  .topnav {
-    overflow: hidden;
-  }
-  
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  .topnav a {
-    font-size: 12px;
-    display: block;
-  }
-  
-  .topnav a.icon {
-    display: block;
-  }
-  /* End of burger menu */
-
-    h1 {
-        font-size: 18px;
-        letter-spacing: 8px;
-    }
-
-    footer {
-        display: block;
-        line-height: 60px;
-    }
-
-    .intro {
-        padding: 70px 0px;
-        height: 150px;
-    }
-
-    #subhead {
-        font-size: 12px;
-        font-weight: 500;
-        letter-spacing: 3px;
-        line-height: 15px;
-        text-align: center;
-    }
-
-    .vertical-line {
-        height: 30px;
-        top: 15px;
-        border-left: 1px solid black;
-    }
-
-    .gallery img {
-        width: 100%;
-    }
-
-    .about {
-        width: 100%;
-    }
-
-}
