@@ -18,12 +18,16 @@ h3{
   display: block !important;
 }
 
+p{
+  font-size: 21px;
+}
+
 footer{
   background-color: lightgray;
   height: 200px;
   align-content: center;
   padding: 100px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
 }
 
